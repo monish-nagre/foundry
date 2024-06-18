@@ -1,14 +1,25 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Counter {
-    uint256 public number;
+import "forge-std/console.sol";       
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
+contract Counter {
+    uint256 public count;
+
+    // Function to get the current count
+    function get() public view returns (uint256) {
+        return count;
     }
 
-    function increment() public {
-        number++;
+    // Function to increment count by 1
+    function inc() public {
+        console.log("here", count);
+        count += 1;
+    }
+
+    // Function to decrement count by 1
+    function dec() public {
+        // This function will fail if count = 0
+        count -= 1;
     }
 }
