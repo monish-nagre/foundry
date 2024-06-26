@@ -31,3 +31,8 @@ contract TestInvariants is Test {
         assertEq(target.flag(), false);
     }
 }
+
+
+// difference between fuzz & invariants : 
+// fuzz : check perticular function with random input 
+// invariants : check all functions with random sequenes with random input
