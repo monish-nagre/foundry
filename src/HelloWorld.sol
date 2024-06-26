@@ -7,3 +7,5 @@ contract HelloWorld {
 
 // change the compiler version : foundry.toml -> solc_version = "VERSION" 
 // Command : forge fmt [formatting code]
+
+// git : git push -u origin master
